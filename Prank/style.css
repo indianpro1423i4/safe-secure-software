@@ -1,0 +1,163 @@
+/* Allgemeine Stile */
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto; /* Scrollen ermöglichen */
+}
+
+/* Container für den Hauptinhalt */
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px; /* Kein Abstand zwischen den Elementen */
+    margin-bottom: auto;
+}
+
+/* Haupttext */
+.main-text {
+    font-size: 1rem; /* Sehr kleiner Text */
+}
+
+/* Fortschrittsanzeige */
+.progress-bar-wrapper {
+    width: 80%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.1); /* Dezenter Hintergrund */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: -10px; /* Negative Werte, um Countdown näher heranzubringen */
+}
+
+.progress-bar {
+    width: 0%; /* Start bei 0% */
+    height: 100%;
+    background: red;
+    transition: width 30s linear; /* Animation für das Füllen */
+}
+
+/* Countdown */
+.countdown {
+    font-size: 1.2rem;
+    color: black;
+    margin-top: -10px; /* Noch enger zur Ladeanzeige */
+}
+
+/* Systemmeldung */
+.system-message {
+    font-size: 1.5rem; /* Größere Schrift */
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px; /* Weniger Abstand innerhalb der Box */
+    border-radius: 5px;
+    margin-top: 10px; /* Minimierter Abstand nach oben */
+    margin-bottom: 10px; /* Minimierter Abstand nach unten */
+}
+
+/* Button zum Anhalten */
+.stop-button {
+    padding: 10px 20px; /* Kleinere Größe */
+    font-size: 1.2rem; /* Kleinere Schrift */
+    background: black;
+    color: red;
+    border: 3px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.stop-button:hover {
+    transform: scale(1.1); /* Leichter Hover-Effekt */
+}
+
+/* Abschlussmeldung */
+.completion-message {
+    display: none;
+    position: absolute; /* Absolut positioniert */
+    top: 0; /* Direkt oben fixiert */
+    left: 50%;
+    transform: translateX(-50%); /* Horizontal zentriert */
+    z-index: 20; /* Über anderen Elementen */
+    text-align: center;
+    background: black;
+    color: lime;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px; /* Nur unten abgerundete Ecken */
+    width: 90%; /* Breite der Abschlussmeldung */
+    max-width: 600px; /* Maximale Breite */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Schatteneffekt */
+}
+
+/* Warnmeldung */
+.warning-popup {
+    width: 90%; /* Breite der Warnmeldung */
+    max-width: 600px; /* Maximale Breite */
+    position: absolute; /* Absolut positioniert */
+    bottom: 0; /* Direkt am unteren Rand */
+    left: 50%; /* Horizontal zentriert */
+    transform: translateX(-50%); /* Zentrierung nur horizontal */
+    background: white;
+    color: red;
+    border: 2px solid red; /* Rote Umrandung */
+    padding: 20px; /* Abstand innerhalb der Box */
+    font-size: 1.2rem; /* Größere Schrift */
+    text-align: center;
+    box-shadow: 0 0 10px black; /* Schatteneffekt */
+    z-index: 15; /* Über dem Button */
+    display: none; /* Anfangs ausgeblendet */
+}
+
+/* Icon in Warnmeldung */
+.warning-icon {
+    width: 40px; /* Größe des Icons */
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px; /* Abstand zwischen Icon und Text */
+    vertical-align: middle;
+}
+
+/* Eingabefeld in der Warnmeldung */
+.input-container {
+    margin-top: 20px; /* Abstand nach oben */
+    text-align: center; /* Zentriert */
+}
+
+.trust-input {
+    width: 80%; /* Breite des Eingabefeldes */
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-sizing: border-box; /* Innenabstand korrekt berechnen */
+}
+
+/* Bestätigungskästchen */
+.checkbox-container {
+    margin-top: 20px; /* Abstand nach oben */
+    text-align: center; /* Zentriert */
+    font-size: 1rem;
+    color: black;
+}
+
+.confirm-checkbox {
+    margin-right: 10px; /* Abstand zum Label */
+    transform: scale(1.5); /* Größeres Kästchen */
+    cursor: pointer;
+}
+
+.small-text {
+    font-size: 0.8rem; /* Kleiner Text */
+    color: grey; /* Dezente Schriftfarbe */
+    margin-top: 5px;
+}
